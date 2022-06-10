@@ -1,0 +1,283 @@
+body {
+    padding: 96px 48px;
+    font-size: 18px;
+    line-height: 24px;
+    display: grid;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    row-gap: 48px;
+    
+}
+
+
+.header {
+    column-gap: 10px;
+    display: grid;
+    grid-template-areas: "main sidebar";
+    grid-template-columns: minmax(350px,1fr) minmax(20px,350px);
+    position: relative;
+    z-index: 100;
+}
+
+.header_name {
+    font-size: 50px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: navy;
+    text-decoration:overline;
+}
+
+.header_role {
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 24px;
+    font-style: oblique;
+ color: #8d3a43;
+ 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+.header_contacts {
+
+    column-gap: 10px;
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: min-content 1fr;
+    line-height: 20px;
+    row-gap: 5px;
+    font-size: 18px;
+
+    color:  #8d3a43;
+    color:  #29816f;
+  }
+
+.header_photo {
+    border-radius: 12px;
+    justify-self: right;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+h2 {
+    border-bottom: 8px solid #000;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+p{
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.articles-list {
+    display: grid;
+    row-gap: 72px;
+}
+
+dl, ul{
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    
+   
+}
+
+.article_technologies dd {
+    font-weight: 700;
+}
+.article_technologies dd, .article_technologies dt {
+    margin: 0;
+    padding: 0;
+}
+
+.articles-list li {
+    position: relative;
+}
+
+li {
+    display: list-item;
+    text-align: ;
+
+}
+
+.article {
+    display: grid;
+    position: relative;
+    row-gap: 5px;
+    cursor: grab;
+    border: 1px solid #eee;
+    border-radius:20px;
+    padding: 0.3rem 0.5rem;
+    background: #f7f6f7;
+    
+}
+
+.article:active {
+    cursor: grabbing;
+  }
+
+  .hide {
+    display: none;
+    }
+
+  .hold {
+    border: 5px solid #eee;
+  }
+
+  .hovered {
+    border-top: 2px solid #f7f6f7;
+  }
+
+h3 {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    line-height: 24px;
+
+}
+
+.article_technologies {
+    column-gap: 10px;
+    grid-template-columns: max-content 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.article_title {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+.article_dates {
+    font-size: 16px;
+    color: #737373;
+    
+}
+
+strong {
+    font-weight: bold;
+}
+
+div { 
+    display: block;
+}
+.article_subtitle {
+    color: #8d3a43;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+p {
+    margin-top: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.content_summary {
+    grid-area: summary;
+}
+
+.articles-list li:after {
+    content: "";
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    border-bottom: 1px dotted var(--color-main);
+}
+
+.content {
+
+    column-gap: 75px;
+    grid-template-areas:
+        "experience summary"
+        "experience skills"
+        "experience certificate"
+        "experience languages"
+        "experience blank"
+        "education blank";
+    grid-template-columns: minmax(400px,1fr) minmax(80px,368px);
+    row-gap: 64px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: start;
+    position: relative;
+    row-gap: 48px;
+    z-index: 100;
+}
+.experience {
+    grid-area: experience;
+    row-gap: 72px;
+}
+
+
+.content_skills {
+    grid-area: skills;
+}
+.skills {
+    margin: 0 0 16px;
+    padding: 0;
+}
+
+.skills_item {
+    border: 1px solid #8d3a43;
+    color: #8d3a43;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    padding: 4px;
+}
+
+.content_certificate {
+    grid-area: certificate;
+}
+
+.content_education {
+    grid-area: education;
+}
+
+.content_languages {
+    grid-area: languages;
+}
+
+.languages {
+    display: grid;
+    row-gap: 20px;
+}
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,20px);
+    column-gap: 5px;
+    justify-content: flex-end;
+}
+
+.rating_dot {
+    background-color: #17476a;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
